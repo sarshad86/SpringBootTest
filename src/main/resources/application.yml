@@ -1,0 +1,30 @@
+endpoints:
+  shutdown:
+    enabled: true
+  beans:
+    sensitive: true
+
+server:
+  port: 8090
+
+global:
+  count: 10
+
+channels:
+  mockserver: true
+
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming-strategy: org.hibernate.cfg.EJB3NamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+  datasource:
+      url: jdbc:h2:mem:db;DB_CLOSE_DELAY=-1
+      driverClassName: org.h2.Driver
+      username: sa
+      password: sa
+      autoReconnect: true

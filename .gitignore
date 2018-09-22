@@ -1,0 +1,9 @@
+# IntelliJ IDEA Files
+.idea
+*.ipr
+*.iml
+*.iws
+*/target
+logs
+*.agent
+*.log
