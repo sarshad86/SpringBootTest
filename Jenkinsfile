@@ -1,10 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'maven:latest'
-            args '-v /c/Users/sarshad/.m2:/root/.m2'
-        }
-    }
+
     stages {
         stage('Build') {
             steps {
