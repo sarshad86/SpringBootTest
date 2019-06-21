@@ -1,7 +1,6 @@
 package com.home.test;
 
 import com.home.test.api.model.Employee;
-import com.home.test.api.model.UserEntity;
 import com.home.test.api.service.EmployeeService;
 import org.junit.After;
 import org.junit.Before;
@@ -10,9 +9,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.test.context.support.WithMockUser;
-import org.springframework.security.web.FilterChainProxy;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
@@ -23,9 +20,9 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.CoreMatchers.is;
+import static org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers.springSecurity;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-import static org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers.*;
 
 /**
  * Created by Sara on 2018/09/13.
@@ -65,7 +62,7 @@ public class EmployeeRestControllerIntegrationTest {
     }
 
     @Test
-    @WithMockUser(username="sarshad", password = "123")
+    @WithMockUser(username = "sarshad", password = "123")
     public void givenEmployees_whenGetEmployees_thenStatus200()
             throws Exception {
 
