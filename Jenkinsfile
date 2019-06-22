@@ -22,7 +22,7 @@ pipeline {
         stage('build docker image') {
                     steps {
                         dir('spring-boot-pipeline'){
-                            sh 'mvn docker:build -t saraar6586/spring-boot-test:spt'
+                            sh 'mvn docker:build -t spt'
                         }
                        }
           }
