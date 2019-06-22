@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Verify') {
             steps {
-                sh 'mvn Verify'
+                sh 'mvn verify'
             }
             post {
                 always {
