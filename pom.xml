@@ -92,7 +92,7 @@
                 <groupId>com.spotify</groupId>
                 <artifactId>dockerfile-maven-plugin</artifactId>
                 <version>1.4.3</version>
-                <executions>
+                <!--<executions>
                     <execution>
                         <id>default</id>
                         <goals>
@@ -103,7 +103,7 @@
                 <configuration>
                     <repository>docker.io/kkapelon/docker-maven-comparison</repository>
                     <tag>${project.version}</tag>
-                </configuration>
+                </configuration>-->
             </plugin>
             <!--<plugin>
                 <groupId>com.spotify</groupId>
